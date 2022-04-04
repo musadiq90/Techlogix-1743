@@ -1,0 +1,1 @@
+select * from STG_SECURITIZATION_TRANCHE
