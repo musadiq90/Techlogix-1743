@@ -1,0 +1,22 @@
+/* Formatted on 4/11/2022 8:47:33 PM (QP5 v5.215.12089.38647) */
+SELECT SI.V_ACCOUNT_NUMBER, v_prod_code, SI.N_EOP_BAL, SI.N_ACCRUED_INTEREST, v_cust_Ref_code
+  FROM STG_INVESTMENTS SI
+ WHERE     SI.FIC_MIS_dATE = '30-SEP-2021'
+       AND V_BROKERAGE_FIRM = 'VW_IFRS_GL_LEVEL_DATA'
+       AND (   V_PROD_CODE LIKE '40201%'
+            OR V_PROD_CODE LIKE '40202%'
+            OR V_PROD_CODE LIKE '40203%'
+            OR V_PROD_CODE LIKE '40204%'
+            or  V_PROD_CODE LIKE '40106%'
+            OR V_PROD_CODE LIKE '40105%'
+            OR V_PROD_CODE LIKE '40104%')
+            
+            
+            
+SELECT SI.V_ACCOUNT_NUMBER,  SI.N_EOP_BAL, SI.N_ACCRUED_INTEREST, v_cust_Ref_code
+  FROM STG_INVESTMENTS SI
+ WHERE     SI.FIC_MIS_dATE = '30-SEP-2021'
+       AND V_BROKERAGE_FIRM = 'VW_IFRS_GL_LEVEL_DATA'
+       AND (   V_PROD_CODE LIKE '40106%'
+            OR V_PROD_CODE LIKE '40105%'
+            OR V_PROD_CODE LIKE '40104%')            
